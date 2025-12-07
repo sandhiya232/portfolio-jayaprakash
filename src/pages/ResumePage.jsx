@@ -28,9 +28,9 @@ export default function ResumePage() {
       </div>
 
       {/* Header */}
-      <h2 className="text-3xl font-bold border-b-2 border-cyan-400 inline-block mb-6 animate-on-scroll">
-        Resume
-      </h2>
+  <h2 className="text-6xl font-extrabold text-center mb-16 animate-fade-in">
+    <span className="border-b-4 border-cyan-400 px-4">Resume</span>
+  </h2>
 
       {/* Download Button */}
       <div className="bg-[#001f3f] p-6 rounded mb-6 animate-on-scroll">
