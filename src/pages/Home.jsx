@@ -142,7 +142,7 @@ Supported fabrication and site teams by delivering clear, accurate, and executio
 
     {/* LEFT SIDE — 3D ANIMATION IMAGE */}
     <div className="md:w-1/2 flex justify-center">
-      <div className="w-[50%] md:w-full rounded-xl shadow-xl border border-cyan-400 transition duration-700 hover:rotate-y-12 hover:rotate-x-6 hover:scale-105 [transform-style:preserve-3d]">
+      <div className="w-[80%] md:w-full rounded-xl shadow-xl border border-cyan-400 transition duration-700 hover:rotate-y-12 hover:rotate-x-6 hover:scale-105 [transform-style:preserve-3d]">
         <img
           src="https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/cc44ed72969113.5bfae0c6087d8.gif"
           alt="3D About Animation"
