@@ -56,29 +56,31 @@ export default function Home() {
   </h2>
 
   <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-3 max-w-6xl mx-auto px-4">
+
     {[
       {
         title: "Structural Steel Detailing – Industrial Projects",
-        desc: `Prepared complete fabrication, assembly, and GA drawings for large-scale steel structures. 
-Handled 3D modeling of beams, columns, bracings, platforms, and ladders in Tekla with high accuracy. 
-Delivered detailed BOMs, part lists, and weld/bolt schedules while coordinating with engineers to resolve RFIs, 
-implement revisions, and maintain project quality standards.`,
-        image: "https://astcad.com.au/wp-content/uploads/2022/08/structural-steel-detailing.jpeg",
+        desc: `Prepared complete fabrication, assembly, and GA drawings for large-scale steel structures.
+Handled 3D modeling of beams, columns, bracings, platforms, and ladders in Tekla with high accuracy.
+Delivered detailed BOMs, part lists, and weld/bolt schedules while coordinating with engineers to resolve RFIs and revisions.`,
+        image:
+          "https://astcad.com.au/wp-content/uploads/2022/08/structural-steel-detailing.jpeg",
       },
       {
         title: "BIM Coordination & Clash Detection (Structural vs MEP)",
-        desc: `Led BIM coordination using Revit and Navisworks to bridge structural and MEP disciplines. 
-Identified and resolved major model conflicts involving ducts, piping, beams, and slabs. 
-Ensured updated GA drawings matched model revisions and submitted clean, clash-free models and coordination 
-reports for efficient site execution.`,
-        image: "https://enecagroup.com/upload/medialibrary/361/6pox4tq18p67zuv021vua3rwhns0xj83/bim_coordination.jpg",
+        desc: `Led BIM coordination using Revit and Navisworks to bridge structural and MEP disciplines.
+Resolved major model conflicts involving ducts, piping, beams, and slabs.
+Delivered clean, clash-free coordinated models and alignment reports for execution.`,
+        image:
+          "https://enecagroup.com/upload/medialibrary/361/6pox4tq18p67zuv021vua3rwhns0xj83/bim_coordination.jpg",
       },
       {
         title: "Erection & General Arrangement (GA) Drawing Package",
-        desc: `Developed full erection plans, elevations, and detailed GA sections for industrial and commercial projects. 
-Prepared anchor bolt layouts, material take-off sheets, and BOQ/BOM documents with precise weight calculations. 
-Supported fabrication and site teams by delivering clear, accurate, and execution-ready drawing packages.`,
-        image: "https://paintingvalley.com/drawings/ga-drawing-3.jpg",
+        desc: `Developed full erection plans, elevations, and sectional GA details for industrial & commercial structures.
+Prepared anchor bolt layouts, material take-off, BOQ/BOM sheets with weight calculations.
+Delivered execution-ready drawing packages supporting fabrication & site teams.`,
+        image:
+          "https://paintingvalley.com/drawings/ga-drawing-3.jpg",
       },
     ].map((project, index) => (
       <div
@@ -86,6 +88,7 @@ Supported fabrication and site teams by delivering clear, accurate, and executio
         className="bg-[#002b36] border border-cyan-400 rounded-xl p-6 shadow-md hover:scale-105 hover:shadow-cyan-300 transition duration-500 animate-on-scroll"
         style={{ animationDelay: `${index * 0.3}s` }}
       >
+        {/* Project Image */}
         <div className="mb-4 cursor-pointer">
           <img
             src={project.image}
@@ -100,14 +103,20 @@ Supported fabrication and site teams by delivering clear, accurate, and executio
           />
         </div>
 
+        {/* Title */}
         <h3 className="text-cyan-400 text-xl font-bold mb-3 text-center">
           {project.title}
         </h3>
-        <p className="text-cyan-100 text-sm text-center whitespace-pre-line">
-          {project.desc}
-        </p>
+
+        {/* ✔ LEFT-ALIGNED LIKE ABOUT SECTION */}
+        <ul className="text-cyan-100 text-sm text-left leading-relaxed list-disc list-outside pl-5 space-y-3">
+          {project.desc.split("\n").map((line, i) =>
+            line.trim() !== "" ? <li key={i}>{line.trim()}</li> : null
+          )}
+        </ul>
       </div>
     ))}
+
   </div>
 
   {/* Modal */}
@@ -126,23 +135,26 @@ Supported fabrication and site teams by delivering clear, accurate, and executio
   </div>
 </section>
 
+
       {/* ---------------- ABOUT SECTION ---------------- */}
+{/* ---------------- ABOUT SECTION ---------------- */}
 <section id="about" className="py-20">
   <h2 className="text-6xl font-extrabold text-center text-cyan-200 mb-12">
     <span className="border-b-4 border-cyan-400 px-4">About</span>
   </h2>
 
-  <div className="
-  max-w-6xl mx-auto px-4 
-  flex flex-col md:flex-row 
-  items-center md:items-start 
-  gap-14 md:gap-20 
-  text-center md:text-left
-">
-
-    {/* LEFT SIDE — 3D ANIMATION IMAGE */}
-    <div className="md:w-1/2 flex justify-center">
-      <div className="w-[80%] md:w-full rounded-xl shadow-xl border border-cyan-400 transition duration-700 hover:rotate-y-12 hover:rotate-x-6 hover:scale-105 [transform-style:preserve-3d]">
+  <div
+    className="
+      max-w-6xl mx-auto px-6 
+      flex flex-col md:flex-row 
+      items-start 
+      gap-10 md:gap-20
+      text-left
+    "
+  >
+    {/* LEFT SIDE — IMAGE */}
+    <div className="md:w-1/2 flex justify-center md:justify-start">
+      <div className="w-[85%] md:w-full rounded-xl shadow-xl border border-cyan-400 transition duration-700 hover:scale-105 hover:rotate-y-6 hover:rotate-x-4 [transform-style:preserve-3d]">
         <img
           src="https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/cc44ed72969113.5bfae0c6087d8.gif"
           alt="3D About Animation"
@@ -151,24 +163,29 @@ Supported fabrication and site teams by delivering clear, accurate, and executio
       </div>
     </div>
 
-    {/* RIGHT SIDE — ABOUT PARAGRAPHS */}
+    {/* RIGHT SIDE — ABOUT TEXT */}
     <div className="md:w-1/2 space-y-6 text-cyan-100 text-lg leading-relaxed">
+
       {[
-        "I’m Jayaprakash G, a Civil Engineering professional and Structural Detailer with hands-on experience in Tekla Structures, AutoCAD, and Revit. I specialize in creating accurate fabrication drawings, erection drawings, and detailed 3D steel structure models.",
-        "I have strong expertise in model coordination, clash detection, GA drawings, and BOM preparation. I ensure high-quality, error-free project deliverables while maintaining effective collaboration with engineers and project teams.",
-        "Over the years, I’ve contributed to projects that required strong attention to detail, problem-solving skills, and the ability to understand complex steel structure behavior.",
-        "I am continuously improving my BIM and detailing skills while expanding my expertise to support evolving industry standards."
+        "I’m Jayaprakash G, a Civil Engineering professional and Structural Detailer with experience in Tekla Structures, AutoCAD, and Revit. I specialize in creating precise fabrication drawings and 3D steel structure models.",
+        "I have strong expertise in model coordination, clash detection, GA drawings, and BOM preparation. I deliver high-quality detailing outputs with a focus on accuracy.",
+        "I’ve contributed to multiple projects requiring deep attention to detail and the ability to understand complex steel structure behavior.",
+        "I continuously enhance my BIM and detailing skills to stay aligned with evolving industry standards."
       ].map((paragraph, index) => (
-        <p key={index} className="animate-on-scroll" style={{ animationDelay: `${index * 0.3}s` }}>
-          {paragraph.split(" ").map((word, i) => (
-            <span key={i} className="inline-block mr-1">{word}</span>
-          ))}
+        <p
+          key={index}
+          className="animate-on-scroll"
+          style={{ animationDelay: `${index * 0.3}s` }}
+        >
+          {paragraph}
         </p>
       ))}
+
     </div>
 
   </div>
 </section>
+
 
       {/* ---------------- CONTACT SECTION ---------------- */}
       <section id="contact" className="py-24 bg-[#001f3f]">
