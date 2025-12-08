@@ -41,7 +41,7 @@ export default function Home() {
         <div className="md:w-1/2 flex justify-center animate-slide-up">
           <div className="w-[80%] md:w-full rounded-xl shadow-xl border border-cyan-400 transition duration-700 hover:rotate-y-12 hover:rotate-x-6 hover:scale-105 [transform-style:preserve-3d]">
             <img
-              src="https://biblus.accasoftware.com/en/wp-content/uploads/sites/2/2022/10/artificial-intelligence-in-construction.jpg"
+              src="https://cdn.dribbble.com/users/492711/screenshots/1496933/house_animate_gif.gif"
               alt="Civil Engineering Illustration"
               className="w-full rounded-xl shadow-lg"
             />
@@ -49,7 +49,7 @@ export default function Home() {
         </div>
       </section>
 
- {/* ---------------- PROJECTS SECTION ---------------- */}
+{/* ---------------- PROJECTS SECTION ---------------- */}
 <section id="projects" className="py-24 bg-[#001f3f]">
   <h2 className="text-6xl font-extrabold text-center mb-16 animate-fade-in">
     <span className="border-b-4 border-cyan-400 px-4">Projects</span>
@@ -59,26 +59,25 @@ export default function Home() {
     {[
       {
         title: "Structural Steel Detailing – Industrial Projects",
-        desc: `• Prepared full fabrication, assembly, and GA drawings for steel structures
-• Modeled beams, columns, bracings, platforms & ladders in 3D Tekla
-• Generated BOM, part lists, weld/bolt schedules with project accuracy
-• Coordinated with engineers for revisions, RFI resolutions, and quality checks`,
+        desc: `Prepared complete fabrication, assembly, and GA drawings for large-scale steel structures. 
+Handled 3D modeling of beams, columns, bracings, platforms, and ladders in Tekla with high accuracy. 
+Delivered detailed BOMs, part lists, and weld/bolt schedules while coordinating with engineers to resolve RFIs, 
+implement revisions, and maintain project quality standards.`,
         image: "https://astcad.com.au/wp-content/uploads/2022/08/structural-steel-detailing.jpeg",
       },
       {
         title: "BIM Coordination & Clash Detection (Structural vs MEP)",
-        desc: `• Conducted coordination between structural and MEP models (Revit + Navisworks)
-• Identified & resolved clashes involving ducts, pipes, beams & slabs
-• Updated GA drawings and ensured all revisions matched model changes
-• Provided clean model handover & coordination reports for site execution`,
+        desc: `Led BIM coordination using Revit and Navisworks to bridge structural and MEP disciplines. 
+Identified and resolved major model conflicts involving ducts, piping, beams, and slabs. 
+Ensured updated GA drawings matched model revisions and submitted clean, clash-free models and coordination 
+reports for efficient site execution.`,
         image: "https://enecagroup.com/upload/medialibrary/361/6pox4tq18p67zuv021vua3rwhns0xj83/bim_coordination.jpg",
       },
       {
         title: "Erection & General Arrangement (GA) Drawing Package",
-        desc: `• Prepared erection plans, elevations, and detailed GA sections
-• Created anchor bolt plans, part indexing, and material take-offs
-• Delivered BOQ/BOM sheets with weight calculations and material standards
-• Supported fabrication & site teams by providing accurate erection documents`,
+        desc: `Developed full erection plans, elevations, and detailed GA sections for industrial and commercial projects. 
+Prepared anchor bolt layouts, material take-off sheets, and BOQ/BOM documents with precise weight calculations. 
+Supported fabrication and site teams by delivering clear, accurate, and execution-ready drawing packages.`,
         image: "https://paintingvalley.com/drawings/ga-drawing-3.jpg",
       },
     ].map((project, index) => (
@@ -101,8 +100,12 @@ export default function Home() {
           />
         </div>
 
-        <h3 className="text-cyan-400 text-xl font-bold mb-3 text-center">{project.title}</h3>
-        <p className="text-cyan-100 text-sm text-center whitespace-pre-line">{project.desc}</p>
+        <h3 className="text-cyan-400 text-xl font-bold mb-3 text-center">
+          {project.title}
+        </h3>
+        <p className="text-cyan-100 text-sm text-center whitespace-pre-line">
+          {project.desc}
+        </p>
       </div>
     ))}
   </div>
@@ -115,30 +118,57 @@ export default function Home() {
       if (e.target.id === "project-modal") e.currentTarget.style.display = "none";
     }}
   >
-    <img id="modal-img" className="max-h-[90vh] max-w-[90vw] rounded shadow-lg" alt="Project Full" />
+    <img
+      id="modal-img"
+      className="max-h-[90vh] max-w-[90vw] rounded shadow-lg"
+      alt="Project Full"
+    />
   </div>
 </section>
 
       {/* ---------------- ABOUT SECTION ---------------- */}
-      <section id="about" className="py-20">
-        <h2 className="text-6xl font-extrabold text-center text-cyan-200 mb-12">
-          <span className="border-b-4 border-cyan-400 px-4">About</span>
-        </h2>
-        <div className="max-w-4xl mx-auto space-y-6 text-cyan-100 text-lg leading-relaxed">
-          {[
-            "I’m Jayaprakash G, a Civil Engineering professional and Structural Detailer with hands-on experience in Tekla Structures, AutoCAD, and Revit. I specialize in creating accurate fabrication drawings, erection drawings, and detailed 3D steel structure models.",
-            "I have strong expertise in model coordination, clash detection, GA drawings, and BOM preparation. I ensure high-quality, error-free project deliverables while maintaining effective collaboration with engineers and project teams.",
-            "Over the years, I’ve contributed to projects that required strong attention to detail, problem-solving skills, and the ability to understand complex steel structure behavior.",
-            "I am continuously improving my BIM and detailing skills while expanding my expertise to support evolving industry standards."
-          ].map((paragraph, index) => (
-            <p key={index} className="animate-on-scroll" style={{ animationDelay: `${index * 0.3}s` }}>
-              {paragraph.split(" ").map((word, i) => (
-                <span key={i} className="inline-block mr-1">{word}</span>
-              ))}
-            </p>
+<section id="about" className="py-20">
+  <h2 className="text-6xl font-extrabold text-center text-cyan-200 mb-12">
+    <span className="border-b-4 border-cyan-400 px-4">About</span>
+  </h2>
+
+  <div className="
+  max-w-6xl mx-auto px-4 
+  flex flex-col md:flex-row 
+  items-center md:items-start 
+  gap-14 md:gap-20 
+  text-center md:text-left
+">
+
+    {/* LEFT SIDE — 3D ANIMATION IMAGE */}
+    <div className="md:w-1/2 flex justify-center">
+      <div className="w-[50%] md:w-full rounded-xl shadow-xl border border-cyan-400 transition duration-700 hover:rotate-y-12 hover:rotate-x-6 hover:scale-105 [transform-style:preserve-3d]">
+        <img
+          src="https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/cc44ed72969113.5bfae0c6087d8.gif"
+          alt="3D About Animation"
+          className="w-full rounded-xl shadow-lg"
+        />
+      </div>
+    </div>
+
+    {/* RIGHT SIDE — ABOUT PARAGRAPHS */}
+    <div className="md:w-1/2 space-y-6 text-cyan-100 text-lg leading-relaxed">
+      {[
+        "I’m Jayaprakash G, a Civil Engineering professional and Structural Detailer with hands-on experience in Tekla Structures, AutoCAD, and Revit. I specialize in creating accurate fabrication drawings, erection drawings, and detailed 3D steel structure models.",
+        "I have strong expertise in model coordination, clash detection, GA drawings, and BOM preparation. I ensure high-quality, error-free project deliverables while maintaining effective collaboration with engineers and project teams.",
+        "Over the years, I’ve contributed to projects that required strong attention to detail, problem-solving skills, and the ability to understand complex steel structure behavior.",
+        "I am continuously improving my BIM and detailing skills while expanding my expertise to support evolving industry standards."
+      ].map((paragraph, index) => (
+        <p key={index} className="animate-on-scroll" style={{ animationDelay: `${index * 0.3}s` }}>
+          {paragraph.split(" ").map((word, i) => (
+            <span key={i} className="inline-block mr-1">{word}</span>
           ))}
-        </div>
-      </section>
+        </p>
+      ))}
+    </div>
+
+  </div>
+</section>
 
       {/* ---------------- CONTACT SECTION ---------------- */}
       <section id="contact" className="py-24 bg-[#001f3f]">
@@ -148,13 +178,24 @@ export default function Home() {
         <div className="text-center space-y-6 text-cyan-100 text-lg">
           {[
             { icon: <FaEnvelope />, label: "Email", value: "jayaprakashcivil200@gmail.com", link: true },
-            { icon: <FaPhone />, label: "Phone", value: "+91 9150630862" },
+            { icon: <FaPhone />, label: "Phone", value: "+91 9150630862", phone: true },
             { icon: <FaMapMarkerAlt />, label: "Location", value: "57/1, Vengattammpettai, Chinnasalem (T.K), Kallakurichi (D.T), Tamilnadu, Pin-606207, India" },
           ].map((item, index) => (
             <p key={index} className="flex justify-center items-center gap-3 animate-on-scroll" style={{ animationDelay: `${index * 0.3}s` }}>
-              {item.icon}
-              {item.link ? <a href={`mailto:${item.value}`} className="text-cyan-400 hover:underline">{item.value}</a> : item.value}
-            </p>
+             {item.icon}
+            {item.link ? (
+                  <a href={`mailto:${item.value}`} className="text-cyan-400 hover:underline">
+                    {item.value}
+                  </a>
+                ) : item.phone ? (
+                  <a href={`tel:${item.value.replace(/\s+/g, "")}`} className="text-cyan-400 hover:underline">
+                    {item.value}
+                  </a>
+                ) : (
+                  item.value
+            )}          
+
+        </p>
           ))}
         </div>
       </section>
